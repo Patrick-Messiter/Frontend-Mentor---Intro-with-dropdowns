@@ -8,29 +8,36 @@
   <script src="script.js" defer></script>
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <nav class="taskbar">
+    <button id="featuresButton">Features <img id="featuresArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
+    <button id="companyButton">Company <img id="companyArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
+    <button>Careers</button>
+    <button>About</button>
+    <button>Login</button>
+    <button>Register</button>
+  </nav>
+  <div class="featuresContainer">
+    <ul>
+      <li>Todo List</li>
+      <li>Calendar</li>
+      <li>Reminders</li>
+      <li>Planning</li>
+    </ul>
+  </div>
+  <div class="companyContainer">
+    <ul>
+      <li>History</li>
+      <li>Our Team</li>
+      <li>Blog</li>
+    </ul>
+  </div>
+  <h1>Make remote work</h1>
 
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
+  <p>Get your team in sync, no matter your location.</p>
+  <p>Streamline processes, create team rituals, and watch productivity soar.</p>
+  <button>Learn more</button>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

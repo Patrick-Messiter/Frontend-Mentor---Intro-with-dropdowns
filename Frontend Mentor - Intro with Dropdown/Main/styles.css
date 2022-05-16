@@ -1,0 +1,53 @@
+* {
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+.featuresContainer {
+    border: 3px solid red;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    visibility: hidden;
+}
+
+
+
+.companyContainer {
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ATTRIBUTION SECTION */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
