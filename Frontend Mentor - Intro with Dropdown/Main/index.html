@@ -5,40 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
   <nav class="taskbar">
-    <button id="featuresButton">Features <img id="featuresArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
-    <button id="companyButton">Company <img id="companyArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
-    <button>Careers</button>
-    <button>About</button>
-    <button>Login</button>
-    <button>Register</button>
+    <img id="logo" src="images\logo.svg" alt="logo image">
+    <ul class="nav-leftList">
+      <li>
+        <button id="featuresButton" class="minimal">Features <img id="featuresArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
+        <ul>
+          <div class="featuresContainer">
+            <ul class="featuresList">
+              <li>Todo List</li>
+              <li>Calendar</li>
+              <li>Reminders</li>
+              <li>Planning</li>
+            </ul>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <button id="companyButton" class="minimal">Company <img id="companyArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
+        <ul>
+          <div class="companyContainer">
+            <ul class="companyList">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <button class="minimal">Careers</button>
+      </li>
+      <li>
+        <button class="minimal margin">About</button>
+      </li>
+    </ul>
+    <nav class="nav-rightList"> 
+      <button class="minimal">Login</button>
+      <button id="registerButton">Register</button>
+    </nav>
   </nav>
-  <div class="featuresContainer">
-    <ul>
-      <li>Todo List</li>
-      <li>Calendar</li>
-      <li>Reminders</li>
-      <li>Planning</li>
-    </ul>
-  </div>
-  <div class="companyContainer">
-    <ul>
-      <li>History</li>
-      <li>Our Team</li>
-      <li>Blog</li>
-    </ul>
-  </div>
-  <h1>Make remote work</h1>
-
-  <p>Get your team in sync, no matter your location.</p>
-  <p>Streamline processes, create team rituals, and watch productivity soar.</p>
-  <button>Learn more</button>
-  
+  <main>
+    <div class="mainContainer">
+      <h1>Make<br> remote work</h1>
+      <p>Get your team in sync, no matter your location.<br>
+      Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class="learnButton">Learn more</button>
+      <div class="logos-container">
+        <img src="images\client-databiz.svg" alt="databiz logo">
+        <img src="images\client-audiophile.svg" alt="audiophile logo">
+        <img src="images\client-meet.svg" alt="meet logo">
+        <img src="images\client-maker.svg" alt="maker logo">
+      </div>
+    </div>
+    <div class="heroContainer">
+      <img class="heroImage" src="images/image-hero-desktop.png" alt="hero image - man holding a laptop">
+    </div>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
