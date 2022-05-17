@@ -12,32 +12,34 @@
 </head>
 <body>
   <nav class="taskbar">
-    <img id="logo" src="images\logo.svg" alt="logo image">
     <ul class="nav-leftList">
+      <img id="logo" src="images/logo.svg" alt="logo image">
       <li>
-        <button id="featuresButton" class="minimal">Features <img id="featuresArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
-        <ul>
-          <div class="featuresContainer">
-            <ul class="featuresList">
-              <li>Todo List</li>
-              <li>Calendar</li>
-              <li>Reminders</li>
-              <li>Planning</li>
-            </ul>
+        <button id="featuresButton" class="minimal">Features<span class="buttonArrow"><img id="featuresArrow" src="images/icon-arrow-down.svg" alt="arrow"></span></button>
+        <div class="featuresContainer">
+          <div class="featuresLogoContainer">
+            <img src="images/icon-todo.svg" alt="todo image">
+            <img src="images/icon-calendar.svg" alt="calendar image">
+            <img src="images/icon-reminders.svg" alt="reminders logo image">
+            <img src="images/icon-planning.svg" alt="planning logo">
           </div>
-        </ul>
+          <ul class="list">
+            <li>Todo List</li>
+            <li>Calendar</li>
+            <li>Reminders</li>
+            <li>Planning</li>
+          </ul> 
+        </div> 
       </li>
       <li>
-        <button id="companyButton" class="minimal">Company <img id="companyArrow" src="images/icon-arrow-down.svg" alt="arrow"></button>
-        <ul>
-          <div class="companyContainer">
-            <ul class="companyList">
-              <li>History</li>
-              <li>Our Team</li>
-              <li>Blog</li>
-            </ul>
-          </div>
-        </ul>
+        <button id="companyButton" class="minimal">Company<span class="buttonArrow"><img id="companyArrow" src="images/icon-arrow-down.svg" alt="arrow"></span></button>
+        <div class="companyContainer">
+          <ul class="list">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </div>
       </li>
       <li>
         <button class="minimal">Careers</button>
@@ -52,16 +54,18 @@
     </nav>
   </nav>
   <main>
-    <div class="mainContainer">
-      <h1>Make<br> remote work</h1>
-      <p>Get your team in sync, no matter your location.<br>
-      Streamline processes, create team rituals, and watch productivity soar.</p>
-      <button class="learnButton">Learn more</button>
-      <div class="logos-container">
-        <img src="images\client-databiz.svg" alt="databiz logo">
-        <img src="images\client-audiophile.svg" alt="audiophile logo">
-        <img src="images\client-meet.svg" alt="meet logo">
-        <img src="images\client-maker.svg" alt="maker logo">
+    <div class="mainOuterContainer">
+      <div class="mainInnerContainer">
+        <h1>Make<br> remote work</h1>
+        <p class="mainSentence">Get your team in sync, no matter your location.<br>
+        Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button class="learnButton">Learn more</button>
+        <div class="mainLogoContainer">
+          <img src="images\client-databiz.svg" alt="databiz logo">
+          <img src="images\client-audiophile.svg" alt="audiophile logo">
+          <img src="images\client-meet.svg" alt="meet logo">
+          <img src="images\client-maker.svg" alt="maker logo">
+        </div>
       </div>
     </div>
     <div class="heroContainer">
