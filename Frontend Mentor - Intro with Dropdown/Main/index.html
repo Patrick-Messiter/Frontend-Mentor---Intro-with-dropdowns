@@ -11,9 +11,10 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
+  <img id="logo" src="images/logo.svg" alt="logo image">
+  <button id="navToggleButton"><img id="toggleButtonImage" src="images/icon-menu.svg" alt="Navigation toggle button"></button>
   <nav class="taskbar">
     <ul class="nav-leftList">
-      <img id="logo" src="images/logo.svg" alt="logo image">
       <li>
         <button id="featuresButton" class="minimal">Features<span class="buttonArrow"><img id="featuresArrow" src="images/icon-arrow-down.svg" alt="arrow"></span></button>
         <div class="featuresContainer">
@@ -48,16 +49,16 @@
         <button class="minimal margin">About</button>
       </li>
     </ul>
-    <nav class="nav-rightList"> 
-      <button class="minimal">Login</button>
-      <button id="registerButton">Register</button>
-    </nav>
+    <ul class="nav-rightList"> 
+      <li><button class="minimal">Login</button></li>
+      <li><button id="registerButton">Register</button></li>
+    </ul>
   </nav>
   <main>
     <div class="mainOuterContainer">
       <div class="mainInnerContainer">
-        <h1>Make<br> remote work</h1>
-        <p class="mainSentence">Get your team in sync, no matter your location.<br>
+        <h1>Make remote work</h1>
+        <p class="mainSentence">Get your team in sync, no matter your location.
         Streamline processes, create team rituals, and watch productivity soar.</p>
         <button class="learnButton">Learn more</button>
         <div class="mainLogoContainer">
