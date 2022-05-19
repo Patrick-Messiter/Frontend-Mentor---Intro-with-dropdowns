@@ -13,34 +13,32 @@ let heroImage = document.querySelector(".heroImage");
 
 
 let navToggleButtonImage = document.querySelector("#toggleButtonImage");
-let navBar = document.querySelector('nav');
+let navBar = document.querySelector('.taskbar');
 
 let navToggleButton = document.querySelector("#navToggleButton");
 
+let transparentContainer = document.querySelector(".transparentGreyContainer");
+
 
 featuresButton.addEventListener('click', () => {
-    let featuresValue = window.getComputedStyle(featuresContainer).getPropertyValue("visibility");
-    if (featuresValue == "hidden") {
-        featuresContainer.style.visibility = "visible";
-        featuresArrow.src="images/icon-arrow-up.svg";
-    } else if (featuresValue == "visible") {
-        featuresContainer.style.visibility = "hidden";
-        featuresArrow.src="images/icon-arrow-down.svg"
+    featuresContainer.classList.toggle('active');
+    let featuresActive = featuresContainer.classList.contains('active');
+    if (featuresActive == true) {
+        featuresArrow.src = "images/icon-arrow-up.svg";
+    } else {
+        featuresArrow.src = "images/icon-arrow-down.svg";
     }
-});
+})
 
 /* COMPANY BUTTON SECTION */
 
 companyButton.addEventListener('click', () => {
-    let companyValue = window.getComputedStyle(companyContainer).getPropertyValue("visibility");
-    if (companyValue == "hidden") {
-        companyContainer.style.visibility = "visible";
-        companyContainer.classList.add("temp");
-        companyArrow.src="images/icon-arrow-up.svg";
-    } else if (companyValue == "visible") {
-        companyContainer.style.visibility = "hidden";
-        companyContainer.classList.remove("temp");
-        companyArrow.src="images/icon-arrow-down.svg";
+    companyContainer.classList.toggle('active');
+    let companyActive = companyContainer.classList.contains('active');
+    if (companyActive == true) {
+        companyArrow.src = "images/icon-arrow-up.svg";
+    } else {
+        companyArrow.src = "images/icon-arrow-down.svg";
     }
 });
 
@@ -49,29 +47,33 @@ companyButton.addEventListener('click', () => {
 function mobileChanges () {
     if (screen.width <= 800) {
         heroImage.src="images/image-hero-mobile.png";
+        
     } else {
         heroImage.src="images/image-hero-desktop.png";
-        navBar.style.display = "grid";
     }
 }
+
+mobileChanges();
 
 window.addEventListener('resize', mobileChanges);
 
 
 
 navToggleButton.addEventListener('click', () => {
-    let navBarValue = window.getComputedStyle(navBar).getPropertyValue("display");
-    if (navBarValue == "none" || "grid") {
-        navBar.style.display = "flex";
-        navBarValue = "flex";
+    navBar.classList.toggle("active");
+    let navBarActive = (navBar.classList.contains("active"));
+    if (navBarActive == true) {
         navToggleButtonImage.src = "images/icon-close-menu.svg";
+        transparentContainer.classList.add('active');
     } else {
-        navBar.style.display = "none"; 
-        navBarValue = "none"; 
         navToggleButtonImage.src = "images/icon-menu.svg";
+        document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
+        transparentContainer.classList.remove('active');
     }
-    console.log(`This is the ${navBarValue}`);
 });
+
+
+
 
 
 

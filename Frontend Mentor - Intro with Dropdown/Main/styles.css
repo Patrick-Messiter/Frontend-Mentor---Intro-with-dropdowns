@@ -6,16 +6,19 @@
     font-family: 'Epilogue', sans-serif;
 }
 
+html {
+    display: flex;
+}
+
 body {
     background-color: hsl(0, 0%, 98%);
-    height: 800px;
+    max-height: 1000px;
 }
 
 h1 {
     font-size: 5rem;
     margin: 0;
 }
-
 
 /*NAV SECTION */
 
@@ -125,13 +128,12 @@ nav {
 }
 
 .featuresContainer {
-    display: grid;
+    display: none;
     justify-items: center;
     grid-template-columns: 1fr 2fr;
     background-color: white;
     list-style-type: none;
     padding: 1.5rem 1rem;
-    visibility: hidden;
     position: absolute;
     left: 7%;
     top: 8%;
@@ -139,8 +141,30 @@ nav {
     border-radius: 0.6rem;
 }
 
+
+.featuresContainer.active {
+    display: grid;
+}
+
+/*
+.featuresContainer {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+    background-color: white;
+    list-style-type: none;
+    padding: 1.5rem 1rem;
+    position: absolute;
+    left: 7%;
+    top: 8%;
+    box-shadow: 0 0 0.7rem -0.2rem hsl(0, 0%, 41%);
+    border-radius: 0.6rem;
+}
+
+*/
+
 .companyContainer {
-    visibility: hidden;
+    display: none;
     align-items:center;
     justify-content: center;
     height: fit-content;
@@ -151,6 +175,10 @@ nav {
     top: 8%;
     box-shadow: 0 0 0.7rem -0.2rem hsl(0, 0%, 41%);
     border-radius: 0.6rem;
+}
+
+.companyContainer.active {
+    display: flex;
 }
 
 
@@ -239,24 +267,38 @@ main {
 @media only screen and (max-width: 800px) {
     /*NAV SECTION MOBILE */
 
-    nav {
+    body {
+        margin: 0;
+    }
+
+    nav.taskbar {
         flex-direction: column;
         position: absolute;
         height: 100%;
         width: 60%;
-        display: flex;
+        display: none;
         background-color: hsl(0, 0%, 98%);
         right: 0%;
-        display: none;
+        font-size: 16px;
     }
 
-    nav.active {
+    nav.taskbar.active {
         display: flex;
+    }
+
+    .transparentGreyContainer.active {
+        display: flex;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        width: 40%;
+        z-index: 1;
+        background-color: hsla(0, 0%, 8%, 0.6);
     }
 
     #navToggleButton {
         display: flex;
-        z-index: 1;
+        z-index: 3;
     }
 
     .nav-leftList {
@@ -265,12 +307,33 @@ main {
         margin: 0;
         align-items: flex-start;
         width: 90%;
+        position: relative;
+        padding-top: 10%;
+    }
+
+    .minimal {
+        margin: 20% 0;
+    }
+
+    .featuresContainer.active {
+        display: grid;
+        position: inherit;
+        box-shadow: 0 0 hsl(0, 0%, 98%);
+    }
+
+    .companyContainer.active {
+        position: inherit;
+        box-shadow: 0 0 white;
     }
 
     .nav-rightList {
         display: flex;
         flex-direction: column;
         padding: 0;
+    }
+
+    #registerButton {
+        padding: 0.7rem 3rem;
     }
 
     /*MAIN MOBILE SECTION */
